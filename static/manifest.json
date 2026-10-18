@@ -1,0 +1,10 @@
+{
+  "name": "YOU AI — Personal AI",
+  "short_name": "YOU AI",
+  "description": "Your personal AI workspace",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#10111a",
+  "theme_color": "#10111a",
+  "icons": []
+}
