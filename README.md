@@ -77,3 +77,24 @@ The included manifest and service worker provide a basic installable web-app she
 5. Sandboxed coding tools
 6. Video understanding/generation (may need paid or scarce GPU resources)
 7. Native Android/iOS app
+
+
+## Zero-budget setup: Hugging Face
+
+This starter can call Hugging Face's OpenAI-compatible router:
+- Set `AI_BASE_URL=https://router.huggingface.co/v1`
+- Set `AI_API_KEY` to a Hugging Face User Access Token stored only in the hosting platform's secret/environment settings.
+- Set `AI_MODEL` to an exact chat model ID that currently supports the Inference Providers router.
+- Never paste the token into chat, frontend files, or a public commit.
+
+Hugging Face documents a small free monthly inference credit for free users (currently $0.10, subject to change). Additional usage requires purchasing credits; keep this project at ₹0 by not purchasing credits or enabling paid usage. When free credits are exhausted, requests may stop working until the next credit period.
+
+### Host on Hugging Face Spaces (free CPU option)
+1. Sign in to Hugging Face and create a new **Space** using the **Docker** SDK.
+2. Choose a name such as `you-ai` and a public or private visibility as you prefer.
+3. Add these files from this repository to the Space repository (or use the Space's Git instructions): `app/`, `static/`, `requirements.txt`, and `Dockerfile`.
+4. In the Space's **Settings → Variables and secrets**, add `AI_BASE_URL`, `AI_MODEL`, and secret `AI_API_KEY`.
+5. Wait for the Space build to finish, then open its URL and test a short chat.
+6. Free CPU Spaces may sleep or have resource limits. Do not enable paid hardware.
+
+The Space host and inference provider are separate: deploying the website does not automatically configure a model token. Keep all secrets in the host settings, not GitHub.
