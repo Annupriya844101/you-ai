@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10111a">
+  <meta name="description" content="YOU AI — your personal AI workspace">
+  <link rel="manifest" href="/static/manifest.json">
+  <link rel="icon" href="data:,">
+  <title>YOU AI — Your Personal AI</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><span class="brand-mark">Y</span><span>YOU <small>AI</small></span></div>
+      <button id="new-chat" class="new-chat">＋ New chat</button>
+      <div class="side-label">YOUR WORKSPACE</div>
+      <button class="nav-item active" data-mode="chat">✦ <span>AI Chat</span></button>
+      <button class="nav-item" data-mode="coding">⌘ <span>Coding</span><em>Planned</em></button>
+      <button class="nav-item" data-mode="image">▧ <span>Images</span><em>Planned</em></button>
+      <button class="nav-item" data-mode="audio">♫ <span>Audio</span><em>Planned</em></button>
+      <button class="nav-item" data-mode="video">▶ <span>Video</span><em>Planned</em></button>
+      <div class="sidebar-bottom"><div class="avatar">Y</div><div><strong>Personal workspace</strong><small>YOU AI · v1</small></div></div>
+    </aside>
+    <main class="main">
+      <header class="topbar"><button id="menu-toggle" class="mobile-menu" aria-label="Open menu">☰</button><span>Personal AI workspace</span><span class="status"><i></i> <span id="connection-status">App ready</span></span></header>
+      <section class="content">
+        <div id="welcome" class="welcome">
+          <div class="hero-icon">✦</div>
+          <p class="eyebrow">YOUR AI. YOUR WAY.</p>
+          <h1>What can I help you<br><span>create today?</span></h1>
+          <p class="intro">Chat in Hindi, English, or Hinglish. More AI tools will be added in phases.</p>
+          <div class="suggestions">
+            <button data-prompt="Mujhe Python bilkul shuru se ek chhote example ke saath sikhao."><b>⌘</b><span><strong>Learn to code</strong><small>Start with Python basics</small></span>↗</button>
+            <button data-prompt="Help me plan my personal YOU AI project in simple Hinglish."><b>✧</b><span><strong>Build something</strong><small>Plan my next project</small></span>↗</button>
+            <button data-prompt="Explain how AI models work in simple Hindi."><b>◎</b><span><strong>Understand AI</strong><small>Explain a complex topic</small></span>↗</button>
+            <button data-prompt="Give me five creative ideas for a website."><b>◇</b><span><strong>Get inspired</strong><small>Explore new ideas</small></span>↗</button>
+          </div>
+        </div>
+        <div id="messages" class="messages" aria-live="polite"></div>
+        <form id="chat-form" class="composer">
+          <textarea id="prompt" rows="1" maxlength="12000" placeholder="Message YOU AI..." aria-label="Message YOU AI"></textarea>
+          <div class="composer-bottom"><span>AI can make mistakes. Verify important information.</span><button id="send" type="submit" aria-label="Send message">↑</button></div>
+        </form>
+        <div class="footer-note">YOU AI · Built to grow with you</div>
+      </section>
+    </main>
+  </div>
+  <script src="/static/app.js"></script>
+</body>
+</html>
